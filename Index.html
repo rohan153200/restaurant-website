@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasty Bites Restaurant</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    background: #111;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background: #222;
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+nav a:hover {
+    background: #ff4d4d;
+}
+.hero {
+    background: url('https://images.unsplash.com/photo-1555992336-03a23c3a4d7f') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 50px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+}
+.section {
+    padding: 50px;
+    text-align: center;
+}
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+button {
+    padding: 10px 20px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: #cc0000;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h2>Tasty Bites 🍽️</h2>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+<h1>Welcome to Tasty Bites</h1>
+</div>
+
+<div class="section" id="menu">
+<h2>Our Special Menu</h2>
+<div class="menu-items">
+<div class="card">
+<h3>Pizza</h3>
+<p>Delicious cheesy pizza</p>
+<p>₹299</p>
+</div>
+<div class="card">
+<h3>Burger</h3>
+<p>Fresh & juicy burger</p>
+<p>₹149</p>
+</div>
+<div class="card">
+<h3>Pasta</h3>
+<p>Italian creamy pasta</p>
+<p>₹199</p>
+</div>
+</div>
+</div>
+
+<div class="section" id="about">
+<h2>About Us</h2>
+<p>We serve fresh and delicious food with love.</p>
+</div>
+
+<div class="section" id="contact">
+<h2>Contact Us</h2>
+<p>Email: info@tastybites.com</p>
+<p>Phone: +91 9876543210</p>
+<button onclick="alert('Table Booked Successfully!')">Book Table</button>
+</div>
+
+<footer>
+<p>© 2026 Tasty Bites Restaurant | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
