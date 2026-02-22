@@ -3,88 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tasty Bites Restaurant</title>
+<title>Tasty Bites | Premium Restaurant</title>
+
 <style>
- <a href="https://wa.me/919905422233" target="_blank" 
-style="position:fixed;bottom:20px;right:20px;background:#25D366;
-color:white;padding:12px 18px;border-radius:50px;
-text-decoration:none;font-weight:bold;box-shadow:0 4px 8px rgba(0,0,0,0.2);">
-Chat on WhatsApp
-</a>   
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
 }
-header {
-    background: #111;
-    color: white;
-    padding: 15px;
-    text-align: center;
+
+header{
+    background:#111;
+    color:white;
+    padding:15px;
+    text-align:center;
 }
-nav {
-    display: flex;
-    justify-content: center;
-    background: #222;
+
+nav{
+    display:flex;
+    justify-content:center;
+    background:#222;
+    flex-wrap:wrap;
 }
-nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
+
+nav a{
+    color:white;
+    padding:14px 20px;
+    text-decoration:none;
+    transition:0.3s;
 }
-nav a:hover {
-    background: #ff4d4d;
+
+nav a:hover{
+    background:#ff4d4d;
 }
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1555992336-03a23c3a4d7f') no-repeat center center/cover;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1555992336-03a23c3a4d7f')
+    no-repeat center center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    padding:20px;
+    animation:fadeIn 2s ease-in-out;
 }
+
+.hero h1{
+    font-size:50px;
 }
-.section {
-    padding: 50px;
-    text-align: center;
+
+.section{
+    padding:60px 20px;
+    text-align:center;
 }
-.menu-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+
+.menu-items{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
 }
-.card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    width: 250px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+
+.card{
+    width:250px;
+    margin:15px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 15px;
+
+.card:hover{
+    transform:translateY(-10px);
 }
-button {
-    padding: 10px 20px;
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    cursor: pointer;
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
 }
-button:hover {
-    background: #cc0000;
+
+.gallery img{
+    width:300px;
+    height:200px;
+    object-fit:cover;
+    margin:10px;
+    border-radius:10px;
 }
- @media(max-width:768px){
-    .menu-items{
-        flex-direction: column;
-        align-items:center;
-    }
+
+form{
+    max-width:400px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+form input, form textarea{
+    margin:10px 0;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+form button{
+    padding:10px;
+    background:#ff4d4d;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+form button:hover{
+    background:#cc0000;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:12px 18px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@media(max-width:768px){
+    .menu-items{flex-direction:column;align-items:center;}
+    .hero h1{font-size:32px;}
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -94,12 +160,12 @@ button:hover {
 <nav>
 <a href="#">Home</a>
 <a href="#menu">Menu</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+<a href="#gallery">Gallery</a>
+<a href="#booking">Book Table</a>
 </nav>
 
 <div class="hero">
-<h1>Welcome to Tasty Bites</h1>
+<h1>Experience Delicious Moments</h1>
 </div>
 
 <div class="section" id="menu">
@@ -107,12 +173,52 @@ button:hover {
 <div class="menu-items">
 <div class="card">
 <h3>Pizza</h3>
-<p>Delicious cheesy pizza</p>
-<p>₹299</p>
+<p>Cheesy delight</p>
+<p><strong>₹299</strong></p>
 </div>
 <div class="card">
 <h3>Burger</h3>
-<p>Fresh & juicy burger</p>
+<p>Fresh & juicy</p>
+<p><strong>₹149</strong></p>
+</div>
+<div class="card">
+<h3>Pasta</h3>
+<p>Italian special</p>
+<p><strong>₹199</strong></p>
+</div>
+</div>
+</div>
+
+<div class="section" id="gallery">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e">
+</div>
+</div>
+
+<div class="section" id="booking">
+<h2>Book a Table</h2>
+<form onsubmit="alert('Booking Request Sent!'); return false;">
+<input type="text" placeholder="Your Name" required>
+<input type="number" placeholder="Guests" required>
+<input type="date" required>
+<textarea placeholder="Special Request"></textarea>
+<button type="submit">Book Now</button>
+</form>
+</div>
+
+<footer>
+<p>© 2026 Tasty Bites | All Rights Reserved</p>
+</footer>
+
+<a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn">
+Chat on WhatsApp
+</a>
+
+</body>
+</html><p>Fresh & juicy burger</p>
 <p>₹149</p>
 </div>
 <div class="card">
@@ -131,7 +237,7 @@ button:hover {
 <div class="section" id="contact">
 <h2>Contact Us</h2>
 <p>Email: info@tastybites.com</p>
-<p>Phone: +91 9876543210</p>
+<p>Phone: +91 9905422233</p>
 <button onclick="alert('Table Booked Successfully!')">Book Table</button>
 </div>
 
